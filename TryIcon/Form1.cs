@@ -15,5 +15,10 @@ namespace TryIcon
         {
             InitializeComponent();
         }
+
+        private void CmsMenu_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
