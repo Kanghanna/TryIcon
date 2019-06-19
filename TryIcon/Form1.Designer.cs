@@ -48,6 +48,7 @@
             this.btnTray.TabIndex = 0;
             this.btnTray.Text = "트레이로 이동";
             this.btnTray.UseVisualStyleBackColor = true;
+            this.btnTray.Click += new System.EventHandler(this.BtnTray_Click);
             // 
             // label1
             // 
@@ -60,8 +61,10 @@
             // 
             // ntiTray
             // 
+            this.ntiTray.ContextMenuStrip = this.cmsMenu;
             this.ntiTray.Icon = ((System.Drawing.Icon)(resources.GetObject("ntiTray.Icon")));
             this.ntiTray.Text = "트레이 아이콘";
+            this.ntiTray.DoubleClick += new System.EventHandler(this.NtiTray_DoubleClick);
             // 
             // cmsMenu
             // 
@@ -69,19 +72,22 @@
             this.폼보이기ToolStripMenuItem,
             this.종료ToolStripMenuItem});
             this.cmsMenu.Name = "cmsMenu";
-            this.cmsMenu.Size = new System.Drawing.Size(181, 70);
+            this.cmsMenu.Size = new System.Drawing.Size(123, 48);
+            this.cmsMenu.DoubleClick += new System.EventHandler(this.CmsMenu_DoubleClick);
             // 
             // 폼보이기ToolStripMenuItem
             // 
             this.폼보이기ToolStripMenuItem.Name = "폼보이기ToolStripMenuItem";
-            this.폼보이기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.폼보이기ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.폼보이기ToolStripMenuItem.Text = "폼보이기";
+            this.폼보이기ToolStripMenuItem.Click += new System.EventHandler(this.폼보이기ToolStripMenuItem_Click);
             // 
             // 종료ToolStripMenuItem
             // 
             this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
-            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.종료ToolStripMenuItem.Text = "종료";
+            this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -95,6 +101,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "트레이 아이콘 by 3101 강한나";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.cmsMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
